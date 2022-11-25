@@ -1,0 +1,66 @@
+@import "./../../constants/style.scss";
+
+
+aside {
+    background-color: $weak-dark;
+    width: 234px;
+    height: 100%;
+    border-right: 1px solid $border;
+    grid-area: aside;
+    box-sizing: border-box;
+}
+
+.title {
+    color: $gray;
+    border-bottom: 1px solid $border;
+    box-sizing: border-box;
+    height: 44px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 7px;
+        top: 10px;
+        width: 24px;
+        height: 24px;
+        background-image: url('./../../images/arrowDown.png');
+        cursor: pointer;
+    }
+}
+
+.list {
+    margin: 0px;
+    padding: 0px;
+
+    li {
+        list-style-type: none;
+        color: $white;
+        position: relative;
+        padding: 8px 0px 8px 56px;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 8px;
+            width: 22px;
+            height: 22px;
+            background-image: url('./../../images/project.png');
+        }
+
+
+ 
+    }
+}
+
+.project_active {
+    background-color: $gray;
+}
+
+@media screen and (max-width: 1350px) {
+    aside {
+        display: none;
+    }
+}

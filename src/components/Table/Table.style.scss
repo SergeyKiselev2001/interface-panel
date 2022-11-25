@@ -1,0 +1,99 @@
+@import "./../../constants/style.scss";
+
+table {
+  width: 100%;
+
+  thead {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid $border;
+    box-sizing: border-box;
+    tr {
+      display: flex;
+    }
+
+    th {
+      padding: 12px 0px;
+    }
+  }
+
+  tbody {
+    tr {
+      display: flex;
+      border-bottom: 1px solid $border;
+
+      td {
+        width: 200px;
+        text-align: center;
+      }
+
+      td:nth-child(1) {
+        width: 130px;
+      }
+
+      td:nth-child(2) {
+        flex-grow: 1;
+        text-align: left;
+      }
+    }
+
+    td {
+      display: block;
+      padding: 21px 0px;
+    }
+  }
+
+  th {
+    color: $gray;
+    font-weight: normal !important;
+  }
+
+  tr {
+    color: $white;
+  }
+}
+
+.level-1 {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 1px;
+    width: 24px;
+    height: 24px;
+    background-image: url("./../../images/lvl1.png");
+    cursor: pointer;
+  }
+}
+
+th {
+  width: 200px;
+}
+
+th:nth-child(1) {
+  width: 130px;
+}
+
+th:nth-child(2) {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.level-2 {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 1px;
+    width: 24px;
+    height: 24px;
+    background-image: url("./../../images/lvl2.png");
+    cursor: pointer;
+  }
+}
+
+.wide-column {
+  width: 40%;
+}

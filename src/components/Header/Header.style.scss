@@ -1,0 +1,30 @@
+@import "./../../constants/style.scss";
+
+header {
+    width: 100vw;
+    background-color: $weak-dark;
+    border-bottom: 1px solid $border;
+    grid-area: header;
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+    margin: 0;
+
+    li {
+        list-style-type: none;
+        color: $gray;
+        vertical-align: middle;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .active {
+        color: $white;
+        border-bottom: 2px solid $white;
+        height: fit-content;
+    }
+}
+
