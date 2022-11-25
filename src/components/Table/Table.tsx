@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { treeDto } from "../../api/axios.types"
 import { fetchTableData, storeType } from "../../redux/store"
 import { FirstLevel } from "./FirstLevel/FirstLevel"
-import "./Table.style.scss"
 import { Thead } from "./Thead/Thead"
+import "./Table.style.scss"
 
 const Table = () => {
     const tableState = useSelector((state: storeType) => state.tableReducer?.tableData) as treeDto
@@ -13,6 +13,7 @@ const Table = () => {
     useEffect(() => {
       if (!tableState?.length){ dispatch(fetchTableData() as any)}
     }, [])
+
 
   return (
     <> 

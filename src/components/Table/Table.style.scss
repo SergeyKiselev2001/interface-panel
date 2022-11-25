@@ -39,7 +39,7 @@ table {
 
     td {
       display: block;
-      padding: 21px 0px;
+      padding: 16px 0px;
     }
   }
 
@@ -53,19 +53,69 @@ table {
   }
 }
 
-.level-1 {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    left: 7px;
-    top: 1px;
-    width: 24px;
-    height: 24px;
-    background-image: url("./../../images/lvl1.png");
-    cursor: pointer;
+.options {
+  padding: 4px 6px 2px 6px;
+  border-radius: 6px;
+  height: fit-content;
+  width: fit-content;
+
+  .hide-icon {
+    visibility: hidden;
+  }
+
+  &:hover {
+    background: #414144;
+  }
+
+  &:hover .hide-icon {
+    visibility: visible;
   }
 }
+
+.options-hide {
+  .hide-icon {
+    visibility: hidden;
+  }
+
+  &:hover .hide-icon {
+    visibility: hidden;
+  }
+}
+
+i {
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+}
+
+.first-lvl-icon {
+  background-image: url("./../../images/lvl1.png");
+}
+.second-lvl-icon {
+  background-image: url("./../../images/lvl2.png");
+}
+.third-lvl-icon {
+  background-image: url("./../../images/file.png");
+}
+.trash-icon {
+  background-image: url("./../../images/trash.png");
+  background-repeat: no-repeat;
+  background-position: 5% 60%;
+}
+
+// .level-1 {
+//   position: relative;
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     left: 7px;
+//     top: 1px;
+//     width: 24px;
+//     height: 24px;
+//     background-image: url("./../../images/lvl1.png");
+//     cursor: pointer;
+//   }
+// }
 
 th {
   width: 200px;
@@ -80,19 +130,19 @@ th:nth-child(2) {
   text-align: left;
 }
 
-.level-2 {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    left: 17px;
-    top: 1px;
-    width: 24px;
-    height: 24px;
-    background-image: url("./../../images/lvl2.png");
-    cursor: pointer;
-  }
-}
+// .level-2 {
+//   position: relative;
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     left: 17px;
+//     top: 1px;
+//     width: 24px;
+//     height: 24px;
+//     background-image: url("./../../images/lvl2.png");
+//     cursor: pointer;
+//   }
+// }
 
 .wide-column {
   width: 40%;
